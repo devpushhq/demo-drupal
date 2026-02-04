@@ -15,9 +15,7 @@ Optional: persist public files
 2) Set env var: `VOLUME_PATH=/data/volume/demo-drupal-volume`
 3) Add a pre-deploy command for subsequent deploys:
    ```bash
-   mkdir -p /app/web/sites/default \
-     && ln -sfn "${VOLUME_PATH%/}" /app/web/sites/default/files \
-     && mkdir -p /app/web/sites/default/files/php
+   mkdir -p /app/web/sites/default && ln -sfn "$VOLUME_PATH" /app/web/sites/default/files
    ```
 
 Storage docs: https://devpu.sh/docs/basics/storage/
