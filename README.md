@@ -4,12 +4,10 @@ Barebones Drupal project for testing the /dev/push Drupal preset.
 
 ## Deploy on /dev/push
 
-1) Create a new project and select the **PHP** preset.
-2) Create a database (see storage docs), e.g. `demo-drupal-db`.
-3) Deploy and complete the Drupal installer.
-   - When asked for the database, choose **SQLite** and set the path to:
-     `/data/database/demo-drupal-db/db.sqlite`
-4) After install, set a `HASH_SALT` env var for the project (any long random string) and re-deploy.
+1) Create a new project and select the **Drupal** preset.
+2) Create a database (see [storage docs](https://devpu.sh/docs/basics/storage/)), e.g. `demo-drupal-db`.
+3) Set a `HASH_SALT` env var (any long random string).
+4) Deploy. When asked for the database in the Drupal installer, choose **SQLite** and set the path to the database path (e.g. `/data/database/demo-drupal-db/db.sqlite`).
 
 Optional: persist public files
 
